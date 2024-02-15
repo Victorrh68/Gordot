@@ -1,0 +1,2 @@
+# Gordot
+Juego rpg tacticss
