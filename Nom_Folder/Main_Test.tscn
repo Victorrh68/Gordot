@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgcdjh2a0ldt3"]
+
+[ext_resource type="Script" path="res://CharacterBody3D_Movement.gd" id="1_h3rb3"]
+
+[sub_resource type="Environment" id="Environment_fuaj2"]
+background_mode = 1
+background_color = Color(0.73, 0.581445, 0.4599, 1)
+volumetric_fog_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_db8v6"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_85cx5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlmhq"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cqi8p"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.687422, -0.201117, 0.697856, -0.0133663, 0.957226, 0.289032, -0.726135, -0.208015, 0.65533, 8.00167, 3.45879, 7.4704)
+environment = SubResource("Environment_fuaj2")
+fov = 60.0
+far = 100.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.779338, 0.626604, 0, -0.626604, 0.779338, 5, 5, 5)
+light_color = Color(1, 0.839216, 0.6, 1)
+light_energy = 0.25
+light_volumetric_fog_energy = 5.0
+shadow_enabled = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.966479, -0.049385, 0.25195, -0.256745, -0.185903, 0.948431, 0, -0.981326, -0.192351, 4.25, 4, 0)
+light_color = Color(1, 0.84, 0.6, 1)
+spot_range = 14.0771
+spot_attenuation = 0.707107
+spot_angle = 58.7566
+spot_angle_attenuation = 0.392292
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.90285, 1.71389, 0)
+script = ExtResource("1_h3rb3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_db8v6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_85cx5")
+skeleton = NodePath("../..")
+
+[node name="Floor_StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_StaticBody3D"]
+shape = SubResource("BoxShape3D_mlmhq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor_StaticBody3D"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("BoxMesh_cqi8p")
