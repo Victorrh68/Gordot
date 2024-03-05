@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5hv10i7b3k08"]
+
+[ext_resource type="TileSet" uid="uid://b2at6k3ou3tw7" path="res://tile_set.tres" id="1_t2gr5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = ExtResource("1_t2gr5")
+rendering_quadrant_size = 32
+format = 2
+layer_0/name = "Layer 0"
+layer_1/name = "Layer 1"
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Layer 2"
+layer_2/z_index = -2
+layer_2/tile_data = PackedInt32Array()

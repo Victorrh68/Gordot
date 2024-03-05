@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Mecha Rts"
-run/main_scene="res://Main_Test.tscn"
+run/main_scene="res://2d_secen_test.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=300
+window/size/window_width_override=1000
+window/size/window_height_override=600
 
 [rendering]
 
