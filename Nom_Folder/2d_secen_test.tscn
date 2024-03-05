@@ -5,14 +5,19 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 texture_filter = 1
 tile_set = ExtResource("1_t2gr5")
 rendering_quadrant_size = 32
 format = 2
 layer_0/name = "Layer 0"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-1, 393217, 1, 0, 524289, 1, -65535, 589825, 1, -65536, 393217, 1, 2, 393217, 1, 1, 393217, 1, 65538, 458753, 1, 65539, 393217, 1, 65540, 327681, 2, 3, 458753, 1, -131071, 458753, 2, -65534, 327681, 2, -65533, 327681, 2, 4, 327681, 2, 5, 327681, 2, 65541, 458753, 2, 131076, 327681, 2, 65534, 1, 8, 65535, 1, 8, 65536, 65537, 8, 65537, 1, 8, 131074, 65537, 8, 131075, 196609, 8)
 layer_1/name = "Layer 1"
+layer_1/y_sort_enabled = true
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array()
 layer_2/name = "Layer 2"
+layer_2/y_sort_enabled = true
 layer_2/z_index = -2
 layer_2/tile_data = PackedInt32Array()
