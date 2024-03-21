@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://b2at6k3ou3tw7" path="res://tile_set.tres" id="1_t2gr5"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(405, 303)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
