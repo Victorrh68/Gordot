@@ -7,6 +7,10 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 0 #ProjectSettings.get_setting("physics/2d/default_gravity")
 
+#func _rect_to_iso(dir_x,dir_y):
+#	var iso_x = ()
+#	return iso_x,iso_y
+
 func _physics_process(delta):
 	# Add the gravity.
 	#if not is_on_floor():

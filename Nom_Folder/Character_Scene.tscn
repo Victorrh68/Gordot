@@ -10,7 +10,8 @@ size = Vector2(127, 127)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(100, 100)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.25, 0.125)
+skew = 0.523599
 script = ExtResource("1_xjpil")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
