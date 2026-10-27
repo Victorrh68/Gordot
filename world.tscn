@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://dmp2mchjmthko"]
+[gd_scene load_steps=2 format=3 uid="uid://dmp2mchjmthko"]
+
+[ext_resource type="PackedScene" uid="uid://cdjtw0vicreiu" path="res://blocks.tscn" id="1_52csd"]
 
 [node name="World" type="Node2D"]
 position = Vector2(-2, -2)
+
+[node name="TileMap" parent="." instance=ExtResource("1_52csd")]
+position = Vector2(227, 94)
